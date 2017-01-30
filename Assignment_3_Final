@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SHOAIB MAHMUD: ASSIGNMENT 2 </title>
+    
+    <style>
+        body {background-color: darkgray}
+        h2 {color: white;
+            text-align: center;
+            text-decoration: None;}
+        
+        h3 {color: white;
+            text-align: center;
+            text-decoration: None;}
+        
+        p { text-align: center;
+        text-decoration: None;}
+        
+        #link:link, #link:visited {
+    background-color: slategray;
+    color: black;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+        } 
+        
+    </style>
+
+</head>
+    
+<body>
+    <h2> <b>Assigmnemt 3  </b> </h2>
+    <h3> <b>Shoaib Mahmud</b> </h3> 
+    <br>
+    <p> <i><a id="link" href="#" onclick="swap('basemapLandcover')"> Base Map</a> </i> &nbsp; &nbsp; &nbsp; &nbsp;
+        <i><a id="link" href="#" onclick="swap('iowaBorder')"> Border</a> </i> &nbsp; &nbsp; &nbsp; &nbsp;
+        <i><a id="link" href="#" onclick="swap('loessHills')" > Hills </a> </i> &nbsp; &nbsp; &nbsp; &nbsp;
+        <i><a id="link" href="#" onclick="swap('museums')"> Museums</a> </i> &nbsp; &nbsp; &nbsp; &nbsp;
+        <i><a id="link" href="#" onclick="swap('orchards')"> Orchards</a> </i> &nbsp; &nbsp; &nbsp; &nbsp;
+        <i><a id="link" href="#" onclick="swap('vineyards')"> Vineyards</a> </i> &nbsp; &nbsp; &nbsp; &nbsp;
+        
+    </p>
+    
+    <p> 
+    <img id="shoaibmap" src="https://shoaibmahmud.github.io/Assignment_2_Final/basemapLandcover.png" alt="map" width="600" height="400" align="middle">    
+    </p>
+</body>
+    
+<script>
+        function swap(x)
+    {document.getElementById("shoaibmap").src="https://shoaibmahmud.github.io/Assignment_2_Final/"+x+".png";
+        }
+    
+    
+</script>
