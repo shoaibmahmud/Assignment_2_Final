@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by shoaibmahmud (http://jsbin.com/pepohol/3/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<style id="jsbin-css">
+
+img {
+  position: absolute;
+  left: 450px;
+  top: 200px;
+  z-index: -1;
+  display: none;
+}
+body {
+  
+   background-color:#d3d2cf;
+}
+
+#menu {
+  position: absolute;
+  left:0 px;
+  width: 250px;
+  height: 1000px;
+  background-color: #9389ed;
+  padding-left: 5px;
+  font-size: 20px;
+}
+
+
+header {
+    padding: 10px;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;}
+
+h4 {
+  text-align: center;
+  
+}
+p {
+  color:white;
+  position:bottom;
+}
+</style>
+</head>
+<body>
+  <header>
+   <h2>CRP 558X </h2>
+   <h3> jQuery Assignment 3 Redux</h3>
+   <h3> Shoaib Mahmud</h3>
+    
+</header>
+
+    <div id="menu">
+    <h4> Map Layers </h4>
+    <input type="radio" name="basemap" value="0" checked> Landcover Basemap<br>
+    <input type="radio" name="basemap" value="1" > Street  Basemap<br> <br>
+
+      <hr>
+
+<input type="checkbox" class="othermap" value="2"> Border
+    <br>
+    <input type="checkbox" class="othermap" value="3"> Hills
+    <br>
+    <input type="checkbox" class="othermap" value="4"> Vineyards
+    <br>
+  </div>
+<div id="map">
+  <img id="map0"  src="https://shoaibmahmud.github.io/Assignment_2_Final/basemapLandcover.png">
+  
+  <img id="map1" src="https://shoaibmahmud.github.io/Assignment_2_Final/basemapStreets.png">   
+  <img id="map2" class="othermap" src="https://shoaibmahmud.github.io/Assignment_2_Final/iowaBorder.png">
+  <img id="map3" class="othermap" src="https://shoaibmahmud.github.io/Assignment_2_Final/loessHills.png"> 
+  <img id="map4" class="othermap" src="https://shoaibmahmud.github.io/Assignment_2_Final/vineyards.png">
+      </div>
+<script id="jsbin-javascript">
+$(document).ready(function(){
+    $("#map0").show();
+
+  $('input:radio[name=basemap]').click(function() {
+    var x = $('input:radio[name=basemap]:checked').val();
+    $("#map0, #map1").hide();
+
+    $("#map" + x).show();
+    });
+
+
+ $(".othermap").change(function(){
+     var y = $(this).val();
+      console.log("map"+ y);
+      $("#map" + y).toggle();
+      });
+    });
+
+
+
+
+</script>
+</body>
+</html>
