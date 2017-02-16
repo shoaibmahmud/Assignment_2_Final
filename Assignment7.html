@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by shoaibmahmud (http://jsbin.com/rixuxo/6/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+header, footer {
+    padding: 1em;
+    color: black;
+    background-color: White;
+    clear: left;
+            text-align: center;}
+
+#heading {
+    padding: 5px;
+    text-align: center;
+    font-size:30px;
+    color: white;
+    background-color: #a81a24;
+    border: solid 1px #a81a24;
+}
+#Example,#Example1,#Example2,#Example3{
+    padding: 5px;
+    text-align: center;
+    font-size:25px;
+     color: white;
+    font-style: italic;
+    background-color: #2f4b59;
+    border: solid 1px #2f4b59;
+}
+
+#panel,#panel1,#panel2,#panel3{
+    padding: 40px;
+    font-size:20px;
+    text-align: center;
+    background-color: #282828;
+    border: solid 1px #282828;
+}
+#panel,#panel2{
+  display: none;
+  color :white;
+}
+#panel3 {
+color :White;
+}
+#panel1 {
+color :#282828;
+}
+
+</style>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+<header>
+   <h1>CRP 558X </h1>
+   <h2> jQuery Playground</h2>
+</header>
+
+<div id="heading"> What is jQuery? </div>
+  <div id="Example" >Click to slide down panel</div>
+<div id="panel">jQuery is a JavaScript library that allows web developers to add extra functionality to their websites. It is open source and provided for free under the MIT license.<br>
+<br> <br>
+<div id="Example"> Click to Slide up Panel!</div></div>
+
+<div id="heading"> Who developed jQuery? </div>
+ 
+<div id="Example1" >Click to See the Developer</div>
+
+<div id="panel1"> jQuery was originally released in January 2006 at BarCamp NYC by John Resig and was influenced by Dean Edwards' earlier cssQuery library. </div>
+
+<div id="heading"> What language is jQuery written in? </div>
+  
+<div id="Example2" > Click to See the Answer</div>
+
+<div id="panel2"> Just like anything else you can write in JavaScript. jQuery really doesn't have its own syntax - it uses the JavaScript syntax and language. </div>
+
+<div id="heading"> Is jQuery a framework? </div>
+  
+<div id="Example3" > Click to See the Answer in different font</div>
+
+<div id="panel3"> No, jQuery is Just a tool. </div>
+
+<footer> Shoaib Mahmud, Department of Community and Regional Planning, ISU</footer>
+
+
+<script id="jsbin-javascript">
+$(document).ready(function(){
+    $("#Example").click(function(){
+        $("#panel").slideDown(500);
+    });
+$("#panel").click(function(){
+        $("#panel").slideUp(500);
+});
+$("#Example1").click(function(){
+			$("#panel1").css("color", "white")
+		});
+ $("#Example2").click(function(){
+        $("#panel2").slideToggle();
+    });
+$("#Example3").click(function(){
+        $("#panel3").css({fontWeight :"bold",
+ color:"blue",
+ fontSize: "30px",
+                         fontFamily: "serif"});
+    });
+});
+
+</script>
+</body>
+</html>
